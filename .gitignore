@@ -1,0 +1,4 @@
+.env
+app/client_secret.json
+app/connection.py
+app/apps.py
