@@ -1,0 +1,38 @@
+import { MongoClient } from "mongodb";
+import dotenv from "dotenv";
+dotenv.config();
+
+const MONGO_URI = process.env.DATABASE || "mongodb://localhost:27017/test";
+export const client = new MongoClient(MONGO_URI);
+
+export const connectDB = async () => {
+  try {
+    await client.connect();
+    console.log("✅ Conectado ao MongoDB");
+
+    const db = client.db("test");
+
+    return {
+      db,
+      users: db.collection("users"),
+      ranking: db.collection("ranking"),
+    };
+
+  } catch (err) {
+    console.error("❌ Erro ao conectar no MongoDB:");
+    console.error(err);
+    process.exit(1);  // encerra explicitamente
+  }
+};
+
+
+export let users: any;
+export let ranking: any;
+export let db: any;
+
+// Inicializa quando o server.ts chamar
+export const initCollections = (collections: any) => {
+  db = collections.db;
+  users = collections.users;
+  ranking = collections.ranking;
+};
