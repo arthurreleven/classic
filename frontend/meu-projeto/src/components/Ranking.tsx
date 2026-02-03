@@ -13,6 +13,7 @@ interface Jogador {
 
 export default function Ranking() {
   const [jogos, setJogos] = useState<string[]>([]);
+<<<<<<< HEAD
 
   const [jogoSelecionado, setJogoSelecionado] = useState(() => {
     return localStorage.getItem("ranking_jogoSelecionado") || "";
@@ -33,10 +34,20 @@ export default function Ranking() {
     localStorage.setItem("ranking_dificuldade", dificuldade);
   }
 }, [dificuldade]);
+=======
+  const [jogoSelecionado, setJogoSelecionado] = useState(
+    localStorage.getItem("ranking_jogoSelecionado") || ""
+  );
+
+  const [dificuldade, setDificuldade] = useState(
+    localStorage.getItem("ranking_dificuldade") || ""
+  );
+>>>>>>> 77524ba (Add Files)
 
   const [ranking, setRanking] = useState<Jogador[]>([]);
   const [loading, setLoading] = useState(false);
 
+<<<<<<< HEAD
   // 🔥 Carregar lista de jogos no início
   useEffect(() => {
     async function carregarJogos() {
@@ -53,6 +64,49 @@ export default function Ranking() {
   }, []);
 
   // 🔥 Carregar ranking quando jogo + dificuldade forem selecionados
+=======
+  const API = "http://localhost:5000";
+
+  // Salva JOGO no localStorage
+  useEffect(() => {
+    if (jogoSelecionado) {
+      localStorage.setItem("ranking_jogoSelecionado", jogoSelecionado);
+    }
+  }, [jogoSelecionado]);
+
+  // Salva DIFICULDADE no localStorage
+  useEffect(() => {
+    if (dificuldade) {
+      localStorage.setItem("ranking_dificuldade", dificuldade);
+    }
+  }, [dificuldade]);
+
+  // ---------------------------------------------
+  // 🔥 Carregar lista de jogos do backend
+  // ---------------------------------------------
+useEffect(() => {
+  async function carregarJogos() {
+    try {
+      const resp = await fetch("http://localhost:5000/api/ranking/jogos", {
+        credentials: "include",
+      });
+
+      const data = await resp.json();
+      console.log("Jogos carregados:", data);
+
+      setJogos(data.map((j: any) => j.jogo));
+    } catch (err) {
+      console.error("Erro ao carregar jogos:", err);
+    }
+  }
+
+  carregarJogos();
+}, []);
+
+  // ---------------------------------------------
+  // 🔥 Carregar o ranking
+  // ---------------------------------------------
+>>>>>>> 77524ba (Add Files)
   useEffect(() => {
     if (!jogoSelecionado || !dificuldade) return;
 
@@ -62,7 +116,14 @@ export default function Ranking() {
 
       try {
         const resp = await fetch(
+<<<<<<< HEAD
           `/api/ranking_nome/${encodeURIComponent(jogoSelecionado)}/${dificuldade}`
+=======
+          `${API}/api/ranking/ranking_nome/${encodeURIComponent(jogoSelecionado)}/${dificuldade}`,
+          {
+            credentials: "include",
+          }
+>>>>>>> 77524ba (Add Files)
         );
 
         const data = await resp.json();
@@ -90,6 +151,7 @@ export default function Ranking() {
       {/* HEADER */}
       <header className="w-full bg-[#00020D] relative z-10">
         <div className="w-full px-6 py-4 flex items-center">
+<<<<<<< HEAD
 
           {/* LOGO */}
           <div className="flex items-center gap-4 mr-20 ml-6">
@@ -108,6 +170,23 @@ export default function Ranking() {
           </nav>
 
           {/* BOTÃO ENTRAR */}
+=======
+          <div className="flex items-center gap-4 mr-20 ml-6">
+            <Link to="/" className="w-35 h-18 flex items-center justify-center cursor-pointer">
+              <img src="/images/images-login/logo-projeto.png" alt="Logo" className="w-full h-full object-contain" />
+            </Link>
+          </div>
+
+          <nav className="ml-20 flex items-center gap-12 text-3xl">
+            <Link to="/" className="cursor-pointer hover:text-orange-400 transition">Jogos</Link>
+            <Link to="/conta" className="cursor-pointer hover:text-orange-400 transition">Conta</Link>
+            <Link to="/sobre" className="cursor-pointer text-orange-400">Sobre</Link>
+            <Link to="/suporte" className="cursor-pointer text-orange-400">Suporte</Link>
+            <Link to="/ranking" className="hover:text-orange-400 transition">Ranking</Link>
+            <Link to="/labia" className="hover:text-orange-400 transition">IA</Link>
+          </nav>
+
+>>>>>>> 77524ba (Add Files)
           <div className="ml-auto mr-6">
             <button
               onClick={() => (window.location.href = "/login/login.html")}
@@ -138,6 +217,7 @@ export default function Ranking() {
             onChange={(e) => {
               const jogo = e.target.value;
               setJogoSelecionado(jogo);
+<<<<<<< HEAD
 
               // Quando troca o jogo, reseta a dificuldade
               setDificuldade("");
@@ -146,6 +226,13 @@ export default function Ranking() {
               setRanking([]);
             }}
              className="
+=======
+              setDificuldade("");
+              localStorage.removeItem("ranking_dificuldade");
+              setRanking([]);
+            }}
+            className="
+>>>>>>> 77524ba (Add Files)
               text-black text-xl px-2 py-2 rounded-xl font-bold
               bg-orange-400 border-2 border-white
               shadow-[4px_4px_0px_#000] 
@@ -169,6 +256,7 @@ export default function Ranking() {
               value={dificuldade}
               onChange={(e) => setDificuldade(e.target.value)}
               className="
+<<<<<<< HEAD
               text-black text-xl px-3 py-2 rounded-xl font-bold
               bg-orange-400 border-2 border-white
               shadow-[4px_4px_0px_#000]
@@ -176,6 +264,15 @@ export default function Ranking() {
               hover:bg-yellow-200
               transition-all cursor-pointer
             "
+=======
+                text-black text-xl px-3 py-2 rounded-xl font-bold
+                bg-orange-400 border-2 border-white
+                shadow-[4px_4px_0px_#000]
+                hover:shadow-[2px_2px_0px_#000]
+                hover:bg-yellow-200
+                transition-all cursor-pointer
+              "
+>>>>>>> 77524ba (Add Files)
             >
               <option value="">-- Escolha --</option>
               <option value="facil">Fácil</option>
@@ -245,4 +342,8 @@ export default function Ranking() {
       </main>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 77524ba (Add Files)

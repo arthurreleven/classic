@@ -11,9 +11,16 @@ export const loginEmail = async (req: Request, res: Response) => {
   const user = resp.user;
 
   req.session.user = {
+<<<<<<< HEAD
     nome: user.nome,
     email: user.email,
     avatar: user.avatar,
+=======
+    nome: user.nome || user.name, // Adicionar fallback para 'name'
+    email: user.email,
+    avatar: user.avatar,
+    avatarId: user.avatarId, // ADICIONAR ESTA LINHA
+>>>>>>> 77524ba (Add Files)
   };
   
   req.session.provedor = "email";
@@ -25,4 +32,8 @@ export const logout = async (req: Request, res: Response) => {
   req.session.destroy(() => {
     res.json({ message: "Logout efetuado" });
   });
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> 77524ba (Add Files)

@@ -6,6 +6,10 @@ declare module "express-session" {
       nome: string;
       email: string;
       avatar?: string;
+<<<<<<< HEAD
+=======
+      avatarId?: number;
+>>>>>>> 77524ba (Add Files)
     };
 
     user_id?: string;

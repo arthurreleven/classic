@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=Coda:wght@400;800&display=swap');
 @import 'keen-slider/keen-slider.min.css';
+=======
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Rajdhani:wght@700&family=Bangers&family=Coda:wght@400;800&display=swap');
+@import 'keen-slider/keen-slider.min.css';
+@import "tailwindcss";
+>>>>>>> 77524ba (Add Files)
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -70,10 +76,13 @@ button:focus-visible {
   }
 }
 
+<<<<<<< HEAD
 .font-bangers {
   font-family: 'Bangers', cursive;
 }
 
+=======
+>>>>>>> 77524ba (Add Files)
 ::-webkit-scrollbar {
   width: 4px;
 }
@@ -95,7 +104,168 @@ button:focus-visible {
   font-family: 'Coda', sans-serif !important;
 }
 
+<<<<<<< HEAD
 .font-coda-800 {
   font-family: 'Coda', sans-serif !important;
   font-weight: 800 !important;
+=======
+.font-bangers {
+  font-family: "Bangers", cursive;
+}
+
+.font-coda-400 {
+  font-family: 'Coda', sans-serif;
+  font-weight: 400;
+}
+
+.font-coda-800 {
+  font-family: "Coda", sans-serif;
+  font-weight: 800;
+}
+
+.font-tech {
+  font-family: "Rajdhani", sans-serif;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.bg-brand-card {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 28 95 / var(--tw-bg-opacity, 1));
+}
+
+.bg-opacity-90 {
+  --tw-bg-opacity: 0.9;
+}
+
+.border-brand-accent {
+  --tw-border-opacity: 1;
+  border-color: rgb(6 182 212 / var(--tw-border-opacity, 1));
+}
+
+.from-brand-highlight {
+  --tw-gradient-from: #FF663D var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(172, 46, 11, 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.to-brand-card {
+  --tw-gradient-to: #001C5F var(--tw-gradient-to-position);
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover\:opacity-100:hover {
+  opacity: 1;
+}
+
+.hover\:scale-105:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus\:ring-2:focus {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-brand-accent:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(6 182 212 / var(--tw-ring-opacity, 1));
+}
+
+.focus\:ring-opacity-75:focus {
+  --tw-ring-opacity: 0.75;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.bg-gradient-to-r.from-brand-highlight.to-brand-card {
+  background-image: linear-gradient(to right, #FF663D, #001C5F) !important;
+  /* #FF663D = Laranja, #001C5F = Azul Escuro */
+  border: 2px solid black !important;
+}
+
+/* Garante que o hover clareie um pouco ou mude a escala, se quiser controlar por aqui também */
+.bg-gradient-to-r.from-brand-highlight.to-brand-card:hover {
+  filter: brightness(1.1); /* Deixa levemente mais brilhante no hover */
+}
+
+/* --- 0. ANIMAÇÃO: O Traço Preto "Fantasma" --- */
+@keyframes flash-thin-hairline {
+  0% {
+    /* Mantive exatamente como você pediu: 1px de espessura e opacidade 0.9 */
+    box-shadow: 0 0 0 1px #06B6D4, inset 0 0 0 1px rgba(0, 0, 0, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 0 1px #06B6D4, inset 0 0 0 0 transparent;
+  }
+}
+
+/* --- 1. Estado Normal --- */
+input[type="text"],
+input[type="password"] {
+  border: 1px solid #e5e7eb; 
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+/* --- 2. Hover (Mouse Passando) --- */
+input[type="text"]:hover,
+input[type="password"]:hover {
+  box-shadow: 0 0 0 1px #06B6D4, 
+              0 15px 25px -5px rgba(0, 0, 0, 0.2); 
+  border-color: #06B6D4; 
+}
+
+/* --- 3. Foco (CLICOU) --- */
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  
+  /* Borda azul física entra imediatamente */
+  border-color: #06B6D4 !important;
+  
+  /* Desativa transição para o efeito ser instantâneo */
+  transition: none; 
+
+  /* MUDEI AQUI: De 0.4s para 0.8s */
+  /* Isso faz o preto demorar o dobro do tempo para sumir */
+  animation: flash-thin-hairline 0.4s ease-out forwards;
+>>>>>>> 77524ba (Add Files)
 }

@@ -28,7 +28,11 @@ export default function Sobre() {
           <div className="flex items-center gap-4 mr-20 ml-6">
             <Link to="/" className="w-35 h-18 flex items-center justify-center cursor-pointer">
               <img
+<<<<<<< HEAD
                 src="/logo-projeto.png"
+=======
+                src="/images/images-login/logo-projeto.png"
+>>>>>>> 77524ba (Add Files)
                 alt="Logo"
                 className="w-full h-full object-contain"
               />
@@ -39,9 +43,16 @@ export default function Sobre() {
           <nav className="ml-20 flex items-center gap-12 text-3xl font-bangers text-white">
             <Link to="/" className="cursor-pointer hover:text-orange-400 transition">Jogos</Link>
             <Link to="/conta" className="cursor-pointer hover:text-orange-400 transition">Conta</Link>
+<<<<<<< HEAD
             <Link to="/sobre" className="cursor-pointer text-orange-400 underline">Sobre</Link>
             <Link to="/suporte" className="cursor-pointer hover:text-orange-400 transition">Suporte</Link>
             <Link to="/ranking" className="hover:text-orange-400 transition">Ranking</Link>
+=======
+            <Link to="/sobre" className="cursor-pointer text-orange-400">Sobre</Link>
+            <Link to="/suporte" className="cursor-pointer text-orange-400">Suporte</Link>
+            <Link to="/ranking" className="hover:text-orange-400 transition">Ranking</Link>
+            <Link to="/labia" className="hover:text-orange-400 transition">IA</Link>
+>>>>>>> 77524ba (Add Files)
           </nav>
 
           {/* BOTÃO ENTRAR */}

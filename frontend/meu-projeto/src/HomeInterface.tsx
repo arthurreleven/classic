@@ -8,6 +8,10 @@ type User = {
   nome: string;
   email: string;
   avatar?: string;
+<<<<<<< HEAD
+=======
+  avatarId?: number;
+>>>>>>> 77524ba (Add Files)
 };
 
 export default function HomeInterface() {
@@ -112,7 +116,11 @@ export default function HomeInterface() {
           <div className="flex items-center gap-4 mr-20 ml-6">
             <Link to="/" className="w-35 h-18 flex items-center justify-center cursor-pointer">
               <img
+<<<<<<< HEAD
                 src="/logo-projeto.png"
+=======
+                src="/images/images-login/logo-projeto.png"
+>>>>>>> 77524ba (Add Files)
                 alt="Logo"
                 className="w-full h-full object-contain"
               />
@@ -122,10 +130,18 @@ export default function HomeInterface() {
           {/* MENU CENTRALIZADO */}
           <nav className="ml-20 flex items-center gap-12 text-3xl font-bangers text-white">
             <Link to="/" className="cursor-pointer hover:text-orange-400 transition">Jogos</Link>
+<<<<<<< HEAD
             <Link to="/ranking" className="cursor-pointer hover:text-orange-400 transition">Conta</Link>
             <Link to="/sobre" className="cursor-pointer text-orange-400 underline">Sobre</Link>
             <Link to="/suporte" className="cursor-pointer hover:text-orange-400 transition">Suporte</Link>
             <Link to="/ranking" className="hover:text-orange-400 transition">Ranking</Link>
+=======
+            <Link to="/conta" className="cursor-pointer hover:text-orange-400 transition">Conta</Link>
+            <Link to="/sobre" className="cursor-pointer text-orange-400">Sobre</Link>
+            <Link to="/suporte" className="cursor-pointer text-orange-400">Suporte</Link>
+            <Link to="/ranking" className="hover:text-orange-400 transition">Ranking</Link>
+            <Link to="/labia" className="hover:text-orange-400 transition">IA</Link>
+>>>>>>> 77524ba (Add Files)
           </nav>
 
           {/* Botão Entrar / Avatar */}
@@ -134,7 +150,11 @@ export default function HomeInterface() {
               <div className="w-12 h-12 rounded-full bg-gray-700 animate-pulse"></div>
             ) : !user ? (
               <button
+<<<<<<< HEAD
                 onClick={() => (window.location.href = "/login/login.html")}
+=======
+                onClick={() => (window.location.href = "/login")}
+>>>>>>> 77524ba (Add Files)
                 className="
                   px-6 py-2 bg-orange-500 text-2xl rounded-xl
                   border-4 border-black shadow-[3px_3px_0px_#000]
@@ -147,7 +167,11 @@ export default function HomeInterface() {
               <div className="relative group">
                 {/* AVATAR */}
                 <img
+<<<<<<< HEAD
                   src={user.avatar || "/images/avatar-default.png"}
+=======
+                  src={user.avatarId ? `/avatars/avatar-${user.avatarId}.jpg` : (user.avatar || "/images/avatar-default.jpg")}
+>>>>>>> 77524ba (Add Files)
                   alt={user.nome || "avatar"}
                   className="
                     w-12 h-12 rounded-full border-4 border-black
@@ -247,6 +271,7 @@ export default function HomeInterface() {
               {
                 id: 1,
                 titulo: "Jogo da Velha",
+<<<<<<< HEAD
                 link: "/jogos/jogo_da_velha/index.html",
                 imagem: "/images/tic-tac-toe.jpg",
               },
@@ -255,16 +280,32 @@ export default function HomeInterface() {
                 titulo: "Space Shooter",
                 link: "#",
                 imagem: "/images/space-shooter.jpg"
+=======
+                link: "/jogovelha",
+                imagem: "/images/jogos-imagens/jogo_da_velha.jpg",
+              },
+              {
+                id: 2,
+                titulo: "Dama",
+                link: "/dama",
+                imagem: "/images/jogos-imagens/dama.jpg"
+>>>>>>> 77524ba (Add Files)
               },
               {
                 id: 3,
                 titulo: "Quiz Game",
+<<<<<<< HEAD
                 link: "#",
                 imagem: "/images/quiz.jpg"
+=======
+                link: "/quiz",
+                imagem: "/images/jogos-imagens/quiz.jpg"
+>>>>>>> 77524ba (Add Files)
               },
               {
                 id: 4,
                 titulo: "JoKenPô",
+<<<<<<< HEAD
                 link: "#",
                 imagem: "/images/jokenpo.jpeg"
               },
@@ -277,6 +318,34 @@ export default function HomeInterface() {
                 id: 6,
                 titulo: "Dama",
                 link: "/dama",
+=======
+                link: "/jokenpo",
+                imagem: "/images/jogos-imagens/jokempo.jpg"
+              },
+              {
+                id: 5,
+                titulo: "Flappy Bird",
+                link: "/flappy",
+                imagem: "/images/jogos-imagens/flipbird.jpg"
+              },
+              {
+                id: 6,
+                titulo: "Mario Jump",
+                link: "/mario",
+                imagem: "/images/jogos-imagens/mario.jpg"
+              },
+              {
+                id: 7,
+                titulo: "Jogo da Memória",
+                link: "/memoria",
+                imagem: "/images/jogos-imagens/memoria.jpg",
+              },
+              {
+                id: 8,
+                titulo: "Space X",
+                link: "/space",
+                imagem: "/images/jogos-imagens/space.jpg",
+>>>>>>> 77524ba (Add Files)
               },
             ]}
             onSliderReady={(slider) => (destaqueSlider.current = slider)}
@@ -307,6 +376,7 @@ export default function HomeInterface() {
             jogos={[
               {
                 id: 101,
+<<<<<<< HEAD
                 titulo: "Space Shooter IA",
                 link: "#",
                 imagem: "/images/space-shooter.jpg"
@@ -333,6 +403,53 @@ export default function HomeInterface() {
                 id: 105,
                 titulo: "Outro desafio",
                 link: "#"
+=======
+                titulo: "Jogo da Memória",
+                link: "/memoria",
+                imagem: "/images/jogos-imagens/memoria.jpg",
+              },
+              {
+                id: 102,
+                titulo: "Space X",
+                link: "/space",
+                imagem: "/images/jogos-imagens/space.jpg",
+              },
+              {
+                id: 103,
+                titulo: "Mario Jump",
+                link: "/mario",
+                imagem: "/images/jogos-imagens/mario.jpg"
+              },
+              {
+                id: 104,
+                titulo: "Flappy Bird",
+                link: "/flappy",
+                imagem: "/images/jogos-imagens/flipbird.jpg"
+              },
+              {
+                id: 105,
+                titulo: "Dama",
+                link: "/dama",
+                imagem: "/images/jogos-imagens/dama.jpg"
+              },
+              {
+                id: 106,
+                titulo: "Quiz Game",
+                link: "/quiz",
+                imagem: "/images/jogos-imagens/quiz.jpg"
+              },
+              {
+                id: 107,
+                titulo: "Jogo da Velha",
+                link: "/jogovelha",
+                imagem: "/images/jogos-imagens/jogo_da_velha.jpg",
+              },
+              {
+                id: 108,
+                titulo: "JoKenPô",
+                link: "/jokenpo",
+                imagem: "/images/jogos-imagens/jokempo.jpg"
+>>>>>>> 77524ba (Add Files)
               },
             ]}
             onSliderReady={(slider) => (iaSlider.current = slider)}
@@ -393,6 +510,17 @@ export default function HomeInterface() {
         </div>
       )}
 
+<<<<<<< HEAD
+=======
+      {/* CHAT BUTTON */}
+      <div className="fixed right-6 bottom-6">
+        <button
+          onClick={() => setIsChatOpen(true)}
+          className="w-24 h-24 bg-orange-500 rounded-full border-4 border-black shadow-lg hover:scale-110 transition-transform duration-300 animate-pulse-custom"
+        />
+      </div>
+
+>>>>>>> 77524ba (Add Files)
       <style>{`
         .animate-pulse-custom {
           animation: pulse 2s infinite ease-in-out;

@@ -8,6 +8,12 @@ import authRoutes from "./routes/auth.routes";
 import rankingRoutes from "./routes/ranking.routes";
 import chatRoutes from "./routes/chat";
 import jogodavelhaRoutes from "./routes/jogodavelha.routes"
+<<<<<<< HEAD
+=======
+import userRoutes from "./routes/users.routes"
+import damaRoutes from "./routes/dama.routes"
+import jokenpoRoutes from "./routes/jokenpo.routes"
+>>>>>>> 77524ba (Add Files)
 
 import { setupSwagger } from "./config/swagger";
 import { configurePassport } from "./config/passport";
@@ -22,7 +28,10 @@ app.use(
   })
 );
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 77524ba (Add Files)
 const secretKey = process.env.SECRET_KEY;
 
 if (!secretKey) {
@@ -49,6 +58,12 @@ app.use("/api", authRoutes);
 app.use("/api/ranking", rankingRoutes);
 app.use("/api/chat", chatRoutes);
 app.use("/", jogodavelhaRoutes);
+<<<<<<< HEAD
+=======
+app.use("/api/add", userRoutes)
+app.use("/dama", damaRoutes)
+app.use("/jokenpo", jokenpoRoutes)
+>>>>>>> 77524ba (Add Files)
 
 app.use("/__routes", (_req, res) => {
   res.json({ ok: true });

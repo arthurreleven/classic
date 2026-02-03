@@ -21,18 +21,32 @@ export const connectDB = async () => {
   } catch (err) {
     console.error("❌ Erro ao conectar no MongoDB:");
     console.error(err);
+<<<<<<< HEAD
     process.exit(1);  // encerra explicitamente
   }
 };
 
 
+=======
+    process.exit(1);
+  }
+};
+
+>>>>>>> 77524ba (Add Files)
 export let users: any;
 export let ranking: any;
 export let db: any;
 
+<<<<<<< HEAD
 // Inicializa quando o server.ts chamar
+=======
+>>>>>>> 77524ba (Add Files)
 export const initCollections = (collections: any) => {
   db = collections.db;
   users = collections.users;
   ranking = collections.ranking;
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> 77524ba (Add Files)

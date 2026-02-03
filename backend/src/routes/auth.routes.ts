@@ -40,5 +40,9 @@ router.get("/me", (req, res) => {
 
 console.log("✅ auth.routes carregado");
 
+<<<<<<< HEAD
 
 export default router;
+=======
+export default router;
+>>>>>>> 77524ba (Add Files)

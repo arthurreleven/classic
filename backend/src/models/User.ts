@@ -6,6 +6,10 @@ export interface IUser extends Document {
   passwordHash?: string;
   provider: "google" | "email";
   providerId?: string;
+<<<<<<< HEAD
+=======
+  avatarId?: number; // Adicionar aqui
+>>>>>>> 77524ba (Add Files)
   vitorias?: number;
   derrotas?: number;
   empates?: number;
@@ -17,6 +21,10 @@ const userSchema = new Schema<IUser>({
   passwordHash: String,
   provider: { type: String, required: true },
   providerId: String,
+<<<<<<< HEAD
+=======
+  avatarId: { type: Number, default: 1 }, // Adicionar aqui
+>>>>>>> 77524ba (Add Files)
   vitorias: { type: Number, default: 0 },
   derrotas: { type: Number, default: 0 },
   empates: { type: Number, default: 0 },
