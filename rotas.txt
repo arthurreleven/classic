@@ -1,3 +1,0 @@
-templates/index.html == home page
-classic-jogo == jogo da velha
-templates/login.html == login page
