@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 1. Define a animação "jump" (pulo) */
+@keyframes jump {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); } /* O quão alto ele pula */
+  100% { transform: translateY(0); }
+}
+
+/* 2. Prepara as letras para a animação */
+.title-jump span {
+  display: inline-block; /* Necessário para a animação funcionar */
+  transition: transform 0.3s ease;
+}
+
+/* 3. Aciona a animação quando o mouse passa por cima do H2 */
+.title-jump:hover span {
+  animation: jump 0.5s ease-in-out; /* 0.5s de duração */
+}
+
+/* 4. Adiciona o atraso (delay) para cada letra pular em sequência */
+.title-jump span:nth-child(1) { animation-delay: 0s; }
+.title-jump span:nth-child(2) { animation-delay: 0.05s; }
+.title-jump span:nth-child(3) { animation-delay: 0.1s; }
+.title-jump span:nth-child(4) { animation-delay: 0.15s; }
+.title-jump span:nth-child(5) { animation-delay: 0.2s; }
+.title-jump span:nth-child(6) { animation-delay: 0.25s; } /* Letra 'C' */
+.title-jump span:nth-child(7) { animation-delay: 0.3s; }
+.title-jump span:nth-child(8) { animation-delay: 0.35s; } /* Letra 'F' */

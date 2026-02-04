@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Jogos Clássicos com IA (Tailwind CSS)</title>
+    
+    <meta name="theme-color" content="#242424">
+
+    <link rel="icon" href="img.logo/colorida.png" type="image/png">
+
+    <head>
+    <link rel="stylesheet" href="arquivo.css">
+</head>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bg-dark-blue': '#00020D',
+                        'highlight-orange': '#FF6600',
+                        'border-orange': '#FF663D', 
+                        'title-orange': '#FF663D',
+                        'logo-blue': '#00A3FF',
+                        'logo-magenta': '#FF00FF',
+                    },
+                    fontFamily: {
+                        sans: ['Inria Sans', 'sans-serif'], 
+                        coda: ['Coda Caption', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+
+</head>
+<body class="bg-bg-dark-blue text-white font-sans min-h-screen relative">
+    
+
+    <img src="../images/sobre/preto-branco.png"alt="Controle de Jogos Abstrato" class="bg-bottom-right-image">
+
+    <header class="fixed top-0 left-0 right-0 z-50 flex items-center px-10 py-4 border-b-4 border-border-orange bg-bg-header justify-start space-x-20">
+        <div class="logo-container">
+            <div class="logo-circle"></div>
+            <div class="logo-shapes"></div>
+            
+        </div>
+       <nav class="ml-auto font:"> 
+    <ul class="flex space-x-8">
+        <li class="flex items-center space-x-2"> 
+            <img src="../images/sobre/colorida.png" alt="Ícone de Jogos" class="h-10 w-auto">
+            <a href="#" class="nav-link text-xl font-bold tracking-wider hover:text-highlight-orange font-coda">Jogos</a>
+        </li>
+        <li class="flex items-center">
+            <a href="#" class="nav-link text-xl font-bold tracking-wider hover:text-highlight-orange font-coda">Conta</a>
+        </li>
+        <li class="flex items-center">
+            <a href="#" class="nav-link text-xl font-bold tracking-wider text-highlight-orange font-coda">Sobre</a>
+        </li> 
+        <li class="flex items-center">
+            <a href="#" class="nav-link text-xl font-bold tracking-wider hover:text-highlight-orange font-coda">Suporte</a>
+        </li>
+    </ul>
+</nav>
+        </header>
+
+    <main class="max-w-5xl mx-auto pt-20 px-5 text-center relative z-10">
+        
+        <h1 class="text-4xl font-coda text-title-orange tracking-wider title-sobre-container">
+            SOBRE
+        </h1>
+
+        <p class="text-3xl leading-tight mb-6 text-justify">
+            Somos um grupo de estudantes do 4º semestre do curso de Análise e Desenvolvimento de Sistemas, unidos pela paixão por tecnologia, inovação e jogos digitais. Nosso projeto nasceu com um objetivo claro: criar um ambiente interativo onde jogos clássicos ganham uma nova vida ao permitir que você jogue contra uma inteligência artificial.
+        </p>
+        <p class="text-3xl leading-tight mb-6 text-justify">
+            Acreditamos que aprender é muito mais significativo quando colocamos a mão na massa. Por isso, desenvolvemos este site como parte do nosso processo de evolução acadêmica e profissional — aplicando conceitos de programação, UX, IA e desenvolvimento web em algo real, divertido e acessível para todos.
+        </p>
+        <p class="text-3xl leading-tight mb-6 text-justify">
+            Aqui, você encontrará jogos nostálgicos com uma camada moderna de desafio: competir contra uma IA treinada para oferecer partidas dinâmicas, inteligentes e imprevisíveis.
+        </p>
+        <p class="text-3xl leading-tight mb-6 text-justify">
+            Estamos entusiasmados em compartilhar esse projeto com você e continuar melhorando, explorando novas tecnologias e levando a experiência dos jogos clássicos ainda mais longe.
+        </p>
+
+        <p class="text-2xl font-coda text-title-orange mt-10 mb-8">
+            Obrigado por jogar com a gente!
+        </p>
+        
+        <h2 class="text-3xl font-coda text-title-orange mt-16 mb-8 border-b border-white/20 pb-4">
+            Tecnologias que Dão Vida aos Nossos Jogos
+        </h2>
+        
+        <div class="relative max-w-full mx-auto">
+            
+             <button id="btn-left" class="carousel-button" onclick="document.getElementById('carousel-inner').scrollBy({ left: -500, behavior: 'smooth' })">
+                &lt;
+            </button>
+            
+            <button id="btn-right" class="carousel-button" onclick="document.getElementById('carousel-inner').scrollBy({ left: 500, behavior: 'smooth' })">
+                &gt;
+            </button>
+
+            <div id="carousel-inner" class="flex space-x-6 pb-4 overflow-x-scroll snap-x snap-mandatory no-scrollbar">
+                
+                <div class="flex-shrink-0 w-full h-[350px] snap-center bg-white border-4 border-border-orange rounded-lg shadow-xl p-6 text-left">
+                    <h3 class="text-3xl font-bold text-bg-dark-blue mb-3">TypeScript (TS)</h3>
+                    <p class="text-xl text-bg-dark-blue">
+                        Usado principalmente no lado do cliente (front-end) para escrever o *código de jogo complexo* com segurança. O TS adiciona tipagem estática rigorosa ao JavaScript, o que é crucial para prevenir erros em tempo de execução nas lógicas de jogo mais intrincadas e garantir uma *comunicação de dados confiável e estruturada* com o servidor e a Inteligência Artificial. Essencial para manter a escalabilidade do projeto.
+                    </p>
+                </div>
+
+                <div class="flex-shrink-0 w-full h-[350px] snap-center bg-white border-4 border-border-orange rounded-lg shadow-xl p-6 text-left">
+                    <h3 class="text-3xl font-bold text-bg-dark-blue mb-3">Python</h3>
+                    <p class="text-xl text-bg-dark-blue">
+                        É a espinha dorsal do *Back-end e da Inteligência Artificial (IA). Utilizamos Python e frameworks especializados (como Flask/Django e bibliotecas de ML/DL) para desenvolver e treinar os **oponentes virtuais* dos jogos. Sua sintaxe limpa e vasto ecossistema de bibliotecas são ideais para a rápida prototipagem e o desenvolvimento robusto de modelos de IA, garantindo partidas desafiadoras e imprevisíveis.
+                    </p>
+                </div>
+
+                <div class="flex-shrink-0 w-full h-[350px] snap-center bg-white border-4 border-border-orange rounded-lg shadow-xl p-6 text-left">
+                    <h3 class="text-3xl font-bold text-bg-dark-blue mb-3">HTML</h3>
+                    <p class="text-xl text-bg-dark-blue">
+                        Define a *estrutura semântica e fundamental* da interface de usuário. O HTML organiza todos os elementos visíveis na tela: o cabeçalho, a área de jogo, placares, botões de controle e caixas de texto. Serve como o esqueleto do site onde as outras linguagens (CSS e JS) constroem a aparência e a interatividade.
+                    </p>
+                </div>
+
+                <div class="flex-shrink-0 w-full h-[350px] snap-center bg-white border-4 border-border-orange rounded-lg shadow-xl p-6 text-left">
+                    <h3 class="text-3xl font-bold text-bg-dark-blue mb-3">CSS (Tailwind)</h3>
+                    <p class="text-xl text-bg-dark-blue">
+                        Responsável pelo *design visual* completo da plataforma. Utilizamos Tailwind CSS para implementar a estética retro-futurista, o esquema de cores vibrantes, efeitos de transição e o layout responsivo. O Tailwind acelera o desenvolvimento e garante que a interface seja *rápida, leve e tenha uma aparência consistente* em todos os dispositivos e tamanhos de tela.
+                    </p>
+                </div>
+
+                <div class="flex-shrink-0 w-full h-[350px] snap-center bg-white border-4 border-border-orange rounded-lg shadow-xl p-6 text-left">
+                    <h3 class="text-3xl font-bold text-bg-dark-blue mb-3">JavaScript (JS)</h3>
+                    <p class="text-xl text-bg-dark-blue">
+                        É a linguagem que traz a *interatividade dinâmica* para a página. No lado do cliente (front-end), o JS gerencia a lógica de jogo em tempo real, manipula eventos de entrada do usuário (cliques, movimentos, teclas) e é responsável por atualizar o DOM (a tela) com base no estado da partida. É o motor que executa os jogos clássicos no navegador.
+                    </p>
+                </div>
+                
+                <div class="flex-shrink-0 w-full h-[350px] snap-center bg-white border-4 border-border-orange rounded-lg shadow-xl p-6 text-left">
+                    <h3 class="text-3xl font-bold text-bg-dark-blue mb-3">MongoDB Atlas (Banco de Dados)</h3>
+                    <p class="text-xl text-bg-dark-blue">
+                        Nosso banco de dados NoSQL baseado na nuvem. Ele armazena *dados cruciais* de maneira flexível, incluindo perfis de usuários, pontuações altas (Leaderboards), e os logs de desempenho da IA usados para re-treinamento e ajustes. Sua arquitetura na nuvem (Atlas) garante alta disponibilidade, segurança e escalabilidade global para o projeto.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        </main>
+    
+    <script>
+        // Lógica de rolagem do carrossel para os botões.
+    </script>
+</body>
+</html>

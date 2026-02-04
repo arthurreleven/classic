@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>GameIA - Jogo da Velha</title>
+</head>
+
+<body>
+    
+    <div id="botao-sair">
+        <button id="btn-sair">Sair do Jogo</button>
+        <button id="btn-voltar">Voltar ao Site</button>
+    </div>
+
+
+    <div id="tela-inicial">
+        <h1>Jogo da Velha</h1>
+        <h2>Escolha seu Nível</h2>
+
+        <div class="niveis">
+            <button data-nivel="Fácil">Fácil</button>
+            <button data-nivel="Médio">Médio</button>
+            <button data-nivel="dificil">Difícil</button>
+        </div>
+    </div>
+
+
+    <div id="tela-jogo">
+        <header>
+            <h1>Jogo da Velha</h1>
+        </header> 
+
+
+        
+        <div class="board" data-board>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>
+
+        <div class="winning-message" data-winning-message>
+            <p class="winning-message-text" data-winning-message-text></p>
+            <button class="winning-message-button" data-restart-button>Reiniciar!</button>
+        </div>
+    </div>
+
+<div id="pontuacao-container" class="pontuacao">
+    <div class="jogador">
+        <div class="nome nome__jogador__um">Você</div>
+        <div class="pontos" id="pontos-voce">0</div>
+    </div>
+    <div class="jogador">
+        <div class="nome nome__jogador__dois">IA</div>
+        <div class="pontos" id="pontos-ia">0</div>
+    </div>
+</div>
+    
+    <script src="./scripts.js"></script>
+</body>
+</html>
